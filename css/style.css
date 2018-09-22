@@ -6,8 +6,10 @@
 }
 .topbar a{
 	color: #00b8ff;
-	text-decoration: none;
-	font-size: 1.5em;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 0.5em;
+    display: block;
 }
 .topbar h1{
 	margin: 0;

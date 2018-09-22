@@ -35,3 +35,12 @@
 #legend img {
         vertical-align: middle;
       }
+
+@media screen and (max-width:860px){
+	#legend{
+		font-size: 9px;
+	}
+	#legend img{
+		width: 21px;
+	}
+}

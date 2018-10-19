@@ -24,33 +24,33 @@
       }
     </style>
 <script type="text/javascript">
-	  const aioColors = document.querySelectorAll('.color span');
-	   aioColors.forEach(color => {
-	  color.addEventListener('click', () => {
-	    const selection = window.getSelection();
-	    const range = document.createRange();
-	    range.selectNodeContents(color);
-	    selection.removeAllRanges();
-	    selection.addRange(range);
-	    try {
-	      document.execCommand('copy');
-	      selection.removeAllRanges();
-	      const original = color.textContent;
-	      color.textContent = 'Copied!';
-	      color.classList.add('success');
-	      setTimeout(() => {
-	        color.textContent = original;
-	        color.classList.remove('success');
-	      }, 1200);
-	    } catch(e) {
-	      const errorMsg = document.querySelector('.error-msg');
-	      errorMsg.classList.add('show');
-	      setTimeout(() => {
-	        errorMsg.classList.remove('show');
-	      }, 1200);
-	    }
-	  });
-	});
+    const aioColors = document.querySelectorAll('.color span');
+     aioColors.forEach(color => {
+    color.addEventListener('click', () => {
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(color);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      try {
+        document.execCommand('copy');
+        selection.removeAllRanges();
+        const original = color.textContent;
+        color.textContent = 'Copied!';
+        color.classList.add('success');
+        setTimeout(() => {
+          color.textContent = original;
+          color.classList.remove('success');
+        }, 1200);
+      } catch(e) {
+        const errorMsg = document.querySelector('.error-msg');
+        errorMsg.classList.add('show');
+        setTimeout(() => {
+          errorMsg.classList.remove('show');
+        }, 1200);
+      }
+    });
+  });
 </script>
 
     </head>
@@ -73,9 +73,7 @@
       <div id="map" style="width: 100%; height: 100vh;"></div>
 
       <script type="text/javascript">
-
         var locations = [
-
           ['<div class="color"><h3>Kuntur Apuchin</h3><p>Gym de pase Ex Asegurado</p> <span>-13.537916,-71.904456</span></div>', -13.537916,-71.904456, 'img/gymex.png'],
           ['<div class="color"><h3>Ventana, Ovalo Pachacutec</h3> -13.531531,-71.968447 <p>Gym de pase Ex Asegurado</p></div>', -13.531531,-71.968447, 'img/gymex.png'],
           ['<div class="color"><h3>Gran Almirante, Correo</h3> -13.523571,-71.975001 <p>Gym de combate</p></div>', -13.523571,-71.975001, 'img/gym.png'],
@@ -144,9 +142,10 @@
           ['<div class="color"><h3>Loza de ttio 4to</h3> -13.533958,-71.958724 <p>Gym de combate</p></div>', -13.533958,-71.958724, 'img/gym.png'],
           ['<div class="color"><h3>Loza los Nogales</h3> -13.540069,-71.937843 <p>Gym de combate</p></div>', -13.540069,-71.937843, 'img/gym.png'],
           ['<div class="color"><h3>Plaza Regocijo</h3> -13.517054, -71.980131 <p>Gym de combate</p></div>', -13.517054, -71.980131, 'img/gym.png'],
-          ['<div class="color"><h3>Nido Onix</h3> -13.520526, -71.975958 <p>Koricancha</p> </div>', -13.520526, -71.975958, 'pokes/95.png']
+          ['<div class="color"><h3>Cruz Tica Tica</h3> -13.507221,-71.995285 <p>Gym de combate</p></div>', -13.507221,-71.995285, 'img/gym.png'],
+          ['<div class="color"><h3>Nido Onix</h3> -13.520526, -71.975958 <p>Koricancha</p> </div>', -13.520526, -71.975958, 'pokes/95.png'],
+          ['<div class="color"><h3>Nido Mantine</h3> -13.522742, -71.966523 <p>Plaza Tupac</p> </div>', -13.522742, -71.966523, 'pokes/226.png']
         ];
-
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
           center: new google.maps.LatLng(-13.525154, -71.950126),
@@ -167,7 +166,6 @@
               "width": "30px" }],
           }],
         });
-
         var infowindow = new google.maps.InfoWindow();
         var marker, i;
         for (i = 0; i < locations.length; i++) {
@@ -193,12 +191,8 @@
             marker.setAnimation(google.maps.Animation.BOUNCE);
           }
         }
-
-
-
       /*var map;
       function initMap() {
-
         var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
         var icons = {
           parking: {

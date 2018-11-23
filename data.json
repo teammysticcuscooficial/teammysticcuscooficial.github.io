@@ -84,4 +84,5 @@
 {"name":"Nido Wailmer","location":{"country":{"slug":"nido"},"coordinates":{"lat":-13.518413,"lng":-71.981355},"full_address":"-13.518413, -71.981355"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.524006,"lng":-71.961440},"full_address":"-13.524006, -71.961440"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.523763,"lng":-71.962000},"full_address":"-13.523763,-71.962000"}}
+{"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.523215,"lng":-71.959229},"full_address":"-13.523215, -71.959229"}}
 ]

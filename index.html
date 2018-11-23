@@ -3,227 +3,424 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="css/style.css">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Pokemap Cusco, TEAM MYSTIC CUSCO OFFICIAL, pokemon go, cusco peru</title>
       <meta name="description" content="Nidos pokemon, gym de pase Ex, gyms de combate en cusco peru"/>
-      <link rel="canonical" href="https://teammysticcuscooficial.github.io/" />
-      <link rel="shortcut icon" href="img/gymex.png">
-      <script src="https://maps.googleapis.com/maps/api/js?q=London&key=AIzaSyCITNOv_bH1V2S5glrj97vQ9slxWH_u9Ps&sensor=false"></script>
-      <style>
-      #legend {
-        font-family: Arial, sans-serif;
-        background: #fff;
-        padding: 10px;
-        margin: 10px;
-        border: 3px solid #000;
-      }
-      #legend h3 {
-        margin-top: 0;
-      }
-      #legend img {
-        vertical-align: middle;
-      }
-    </style>
-<script type="text/javascript">
-    const aioColors = document.querySelectorAll('.color span');
-     aioColors.forEach(color => {
-    color.addEventListener('click', () => {
-      const selection = window.getSelection();
-      const range = document.createRange();
-      range.selectNodeContents(color);
-      selection.removeAllRanges();
-      selection.addRange(range);
-      try {
-        document.execCommand('copy');
-        selection.removeAllRanges();
-        const original = color.textContent;
-        color.textContent = 'Copied!';
-        color.classList.add('success');
-        setTimeout(() => {
-          color.textContent = original;
-          color.classList.remove('success');
-        }, 1200);
-      } catch(e) {
-        const errorMsg = document.querySelector('.error-msg');
-        errorMsg.classList.add('show');
-        setTimeout(() => {
-          errorMsg.classList.remove('show');
-        }, 1200);
-      }
-    });
-  });
+      <link rel="shortcut icon" href="img/nido.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.rawgit.com/googlemaps/v3-utility-library/master/markerclustererplus/src/markerclusterer.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
+<!--script src="https://maps.google.com/maps/api/js?sensor=true"></script-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6PTbsHpFE0ZzFsgVXy3Od1f-CRXx4YDI&callback=initMap">
 </script>
 
-    </head>
 
-    <body>
-      <div class="topbar">
-        <div class="grupo">
-          <div class="caja base-100 movil-50 tablet-50 web-50 hd-50"><h1>TEAM MYSTIC CUSCO</h1></div>
-          <div class="caja base-100 movil-50 tablet-50 web-50 hd-50 desde-tablet"><a href="https://www.facebook.com/TeamMysticCuscoOficial/" target="_blank">Facebook</a></div>
+<!--a href="https://github.com/rhcarlosweb/google-maps-multi-filter-jquery" target="_blank" class="repo">
+    <i class="fa fa-github"></i><span>Fork</span>
+</a-->
+<script src="cargartabla.js"></script>
+</head>
+
+<div  class="search-form">
+    <div class="form-group has-feedback searchopkform">
+        <label for="search" class="sr-only">Search</label>
+        <input id="pac-input" type="text" class="form-control" name="search" id="search" placeholder="Ingrese nombre o coordenadas">
+        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+    </div>
+</div>
+
+<!-- mapa iframe -->
+<div id="mapgoogle"></div>
+<!-- fim mapa iframe -->
+
+<!-- filters -->
+<div id="legend">
+    <form action="" id="buscar-locais">
+        <div class="row">
+            <div class="col-xs-12">
+                <select class="form-control selectpicker" id="pais">
+                    <option value="">Todos</option>
+                    <option data-thumbnail="gym.png" value="gym">Gyms</option>
+                    <option data-thumbnail="images/gymex.png" value="gymex">Gym Ex</option>
+                    <option data-thumbnail="images/nido.png" value="nido">Nidos</option>
+                    <option data-thumbnail="images/stop.png" value="stop">Misiones</option>
+                </select>
+            </div>
+            <br>
+            <div class="col-xs-12">
+                <button type="submit" class=" btn btn-default btn-success" style="width: 100%;margin-top: 7px;">
+                   <span class="glyphicon glyphicon-search"></span> Buscar
+                </button>
+            </div>
         </div>
+    </form>
+</div>
+<!-- end filters -->
+
+
+<!-- Button trigger modal -->
+<button style="display: none;" type="button" class="btn btn-primary" id="MdBottom" data-toggle="modal" data-target="#exampleModal">
+  Add New
+</button>
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">AÑADIR, EDITAR O ELIMINAR</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
+      <div class="modal-body">
+        <div class="row">
+        <div class="col-md-12 ml-auto">
+             <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Nombre:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Tipo:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Longitud:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Latitud:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+            </form>
+        </div>
+        <div class="col-md-12 ml-auto"><h5>DATOS RECOPILADOS</h5></div>
+            <div id="tabla-casificacion">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <th>Long</th>
+                            <th>Lat</th>
+                        </tr>
+                    </thead>
+                    <tbody id="equipos-tabla">
+                        
+                        
+                    </tbody>
+                </table>
+            </div>
 
-      <div id="legend">
-        <h3>Leyenda</h3>
-        <div><img src="img/gymex.png"> Gyms Pase Ex</div>
-        <div><img src="img/gym.png"> Gyms</div>
-        <div><img src="pokes/25.png"> Poke = Nidos</div>
+            <button type="button" class="btn btn-secondary" id="mostrar-tabla">Mostrar tabla</button>
+        </div>
+       
       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-      <div id="map" style="width: 100%; height: 100vh;"></div>
 
-      <script type="text/javascript">
-        var locations = [
-          ['<div class="color"><h3>Kuntur Apuchin</h3><p>Gym de pase Ex Asegurado</p> <span>-13.537916,-71.904456</span></div>', -13.537916,-71.904456, 'img/gymex.png'],
-          ['<div class="color"><h3>Ventana, Ovalo Pachacutec</h3> -13.531531,-71.968447 <p><img style="width: 100%;" src="//lh6.ggpht.com/iUA4rMZV_3jbhyJCN1mAkzvynsRz8Syy7uYiOrmG60u9HQrMnDs6RUrob5CaL8HLFO_yKtCognGSFfPNhqQ=s130"></p></div>', -13.531531,-71.968447, 'img/gymex.png'],
-          ['<div class="color"><h3>Gran Almirante, Correo</h3> -13.523571,-71.975001 <p>Gym de combate</p></div>', -13.523571,-71.975001, 'img/gym.png'],
-          ['<div class="color"><h3>San Borja</h3> <p>Gym de combate <br> <input type="text" value="-13.515627,-71.978465"></p></div>', -13.515627,-71.978465, 'img/gym.png'],
-          ['<div class="color"><h3>Inca Relics</h3> -13.508499,-71.983852 <p>Gym de pase Ex</p></div>', -13.508499,-71.983852, 'img/gymex.png'],
-          ['<div class="color"><h3>Cristo Blanco</h3> -13.509662,-71.978142 <p>Gym de combate</p></div>', -13.509662,-71.978142, 'img/gym.png'],
-          ['<div class="color"><h3>Qenqo</h3> -13.508968,-71.97057 <p>Centro hsitorico</p></div>', -13.508968,-71.97057, 'img/gym.png'],          
-          ['<div class="color"><h3>CEMENTERIO SAN JERONIMO</h3> -13.541141,-71.886297 <p>Gym de combate</p></div>', -13.541141,-71.886297, 'img/gym.png'],          
-          ['<div class="color"><h3>SAN JERONIMO</h3> -13.544468,-71.883372 <p>Gym de combate</p></div>', -13.544468,-71.883372, 'img/gym.png'],          
-          ['<div class="color"><h3>ENTRADA SAN SEBASTIAN</h3> -13.53683,-71.906647 <p>Gym de combate</p></div>', -13.53683,-71.906647, 'img/gym.png'],          
-          ['<div class="color"><h3>AEROPUERTO</h3> -13.537897,-71.943762 <p>Gym de combate</p></div>', -13.537897,-71.943762, 'img/gym.png'],          
-          ['<div class="color"><h3>SAN SEBASTIAN</h3> -13.530095,-71.937757 <p>Gym de combate</p></div>', -13.530095,-71.937757, 'img/gym.png'],          
-          ['<div class="color"><h3>MAGISTERIO</h3> -13.523904, -71.947851 <p>Gym de combate</p></div>', -13.523904, -71.947851, 'img/gym.png'],          
-          ['<div class="color"><h3>INDEPENDIZADORES</h3> -13.533321,-71.955087 <p>Gym de combate</p></div>', -13.533321,-71.955087, 'img/gym.png'],          
-          ['<div class="color"><h3>HOSPITAL</h3> -13.524331,-71.956753 <p>Gym de combate</p></div>', -13.524331,-71.956753, 'img/gym.png'],          
-          ['<div class="color"><h3>MURAL</h3> -13.523132,-71.963421 <p>Gym de combate</p></div>', -13.523132,-71.963421, 'img/gym.png'],          
-          ['<div class="color"><h3>ROSASPATA</h3> -13.517626,-71.966729 <p>Gym de combate</p></div>', -13.517626,-71.966729, 'img/gym.png'],          
-          ['<div class="color"><h3>PLAZA TUPAC</h3> -13.523046,-71.966019 <p>Gym de combate</p></div>', -13.523046,-71.966019, 'img/gym.png'],          
-          ['<div class="color"><h3>ESTADIO</h3> -13.524384,-71.966925 <p>Gym de combate</p></div>', -13.524384,-71.966925, 'img/gym.png'],          
-          ['<div class="color"><h3>OVALO MONUMENTO</h3> -13.531336,-71.968818 <p>Gym de combate</p></div>', -13.531336,-71.968818, 'img/gym.png'],          
-          ['<div class="color"><h3>CONDOR MINI</h3> -13.528027,-71.970935 <p>Gym de combate</p></div>', -13.528027,-71.970935, 'img/gym.png'],          
-          ['<div class="color"><h3>PACCHA</h3> -13.524724,-71.972639 <p>Gym de combate</p></div>', -13.524724,-71.972639, 'img/gym.png'],          
-          ['<div class="color"><h3>RIMACPAMPA</h3> -13.519618,-71.973553 <p>Gym de combate</p></div>', -13.519618,-71.973553, 'img/gym.png'],          
-          ['<div class="color"><h3>QORICANCHA</h3> -13.519905,-71.975318 <p>Gym de combate</p></div>', -13.519905,-71.975318, 'img/gym.png'],          
-          ['<div class="color"><h3>PALACIO</h3> -13.518827,-71.977659 <p>Gym de combate</p></div>', -13.518827,-71.977659, 'img/gym.png'],          
-          ['<div class="color"><h3>SANTA CATALINA</h3> -13.51765,-71.977184 <p>Gym de combate</p></div>', -13.51765,-71.977184, 'img/gym.png'],          
-          ['<div class="color"><h3>SAN BLAS</h3> -13.515173,-71.974229 <p>Gym de combate</p></div>', -13.515173,-71.974229, 'img/gym.png'],          
-          ['<div class="color"><h3>PLAZA DE ARMAS</h3> -13.516701,-71.978699 <p>Gym de combate</p></div>', -13.516701,-71.978699, 'img/gym.png'],          
-          ['<div class="color"><h3>BOLIVAR</h3> -13.518865,-71.981751 <p>Gym de combate</p></div>', -13.518865,-71.981751, 'img/gym.png'],          
-          ['<div class="color"><h3>SAN FRANCISCO</h3> -13.51827,-71.981913 <p>Gym de combate</p></div>', -13.51827,-71.981913, 'img/gym.png'],          
-          ['<div class="color"><h3>PARQUE DE LA MADRE</h3> -13.515549,-71.981726 <p>Gym de combate</p></div>', -13.515549,-71.981726, 'img/gym.png'],          
-          ['<div class="color"><h3>POKENKANCHA</h3> -13.5292254,-71.9921605 <p>Gym de combate</p></div>', -13.5292254,-71.9921605, 'img/gym.png'],          
-          ['<div class="color"><h3>TEMPLO SANTIAGO</h3> -13.5256466,-71.9835295 <p>Gym de combate</p></div>', -13.5256466,-71.9835295, 'img/gym.png'],          
-          ['<div class="color"><h3>PUENTE GRAU</h3> -13.524260, -71.977949 <p>Gym de combate</p></div>', -13.524260, -71.977949, 'img/gym.png'],          
-          ['<div class="color"><h3>TITANIC</h3> -13.545369, -71.986431 <p>Gym de combate</p></div>', -13.545369, -71.986431, 'img/gym.png'],          
-          ['<div class="color"><h3>TORRECHAYOC</h3> -13.515072, -71.965449 <p>Gym de combate</p></div>', -13.515072, -71.965449, 'img/gymex.png'],          
-          ['<div class="color"><h3>PARQUE SICUANI</h3> -13.528023, -71.961278 <p>Gym de combate</p></div>', -13.528023, -71.961278, 'img/gym.png'],          
-          ['<div class="color"><h3>Parque Squeit</h3> -13.534478,-71.90354 <p>Gym de combate</p></div>', -13.534478,-71.90354, 'img/gym.png'],
-          ['<div class="color"><h3>Iglesia Santa Rita</h3> -13.531338,-71.89932 <p>Gym de combate</p></div>', -13.531338,-71.89932, 'img/gymex.png'],          
-          ['<div class="color"><h3>Bienvenido san Jeronimo</h3> -13.537134,-71.90617 <p>Gym de combate</p></div>', -13.537134,-71.90617, 'img/gym.png'],          
-          ['<div class="color"><h3>Puente Marcavalle</h3> -13.527338,-71.94597 <p>Gym de combate</p></div>', -13.527338,-71.94597, 'img/gym.png'],          
-          ['<div class="color"><h3>Consulado belgica</h3> -13.524288, -71.94825 <p>Gym de combate</p></div>', -13.524288, -71.94825, 'img/gym.png'],          
-          ['<div class="color"><h3>Mural Hospital Regional</h3> -13.524091,-71.95546 <p>Gym de combate</p></div>', -13.524091,-71.95546, 'img/gym.png'],          
-          ['<div class="color"><h3>Ing Electronica</h3> -13.521086,-71.95696 <p>Gym de combate</p></div>', -13.521086,-71.95696, 'img/gym.png'],          
-          ['<div class="color"><h3>Parroquia sra. de gracia</h3> -13.51572,-71.951355 <p>Gym de combate</p></div>', -13.51572,-71.951355, 'img/gym.png'],          
-          ['<div class="color"><h3>Occhullo grande</h3> -13.5186205,-71.96092 <p>Gym de combate</p></div>', -13.5186205,-71.96092, 'img/gym.png'],          
-          ['<div class="color"><h3>Parroquia Trinidad</h3> -13.520994,-71.96251 <p>Gym de combate</p></div>', -13.520994,-71.96251, 'img/gym.png'],          
-          ['<div class="color"><h3>Mariscal Gamarra</h3> -13.521944,-71.962776 <p>Gym de combate</p></div>', -13.521944,-71.962776, 'img/gym.png'],          
-          ['<div class="color"><h3>Loza Tio</h3> -13.533534,-71.96237 <p>Gym de pase Ex</p></div>', -13.533534,-71.96237, 'img/gymex.png'],          
-          ['<div class="color"><h3>Mercado Tio</h3> -13.531607,-71.96028 <p>Gym de combate</p></div>', -13.531607,-71.96028, 'img/gym.png'],          
-          ['<div class="color"><h3>Museo Natural</h3> -13.517639,-71.97872 <p>Gym de combate</p></div>', -13.517639,-71.97872, 'img/gym.png'],          
-          ['<div class="color"><h3>Fuente san Blas</h3> -13.515146,-71.97412 <p>Gym de combate</p></div>', -13.515146,-71.97412, 'img/gym.png'],          
-          ['<div class="color"><h3>Cruz Cristo nuestro señor de Tica Tica</h3> -13.507595, -72.005813 <p>Gym de combate</p></div>', -13.507595, -72.005813, 'img/gym.png'],
-          ['<div class="color"><h3>Arcos de Tica Tica</h3> -13.507552, -72.005596 <p>Gym de combate</p></div>', -13.507552, -72.005596, 'img/gym.png'],
-          ['<div class="color"><h3>Villa miraflores</h3> -13.543509,-71.89695 <p>Gym de combate</p></div>', -13.543509,-71.89695, 'img/gym.png'],          
-          ['<div class="color"><h3>san jeronimo</h3> -13.543271,-71.88688 <p>Gym de combate</p></div>', -13.543271,-71.88688, 'img/gym.png'],
-          ['<div class="color"><h3>Gruta santa rosa</h3> -13.532766493198729, -71.92102940443777 <p>Gym de combate</p></div>', -13.532766493198729, -71.92102940443777, 'img/gym.png'],
-          ['<div class="color"><h3>A tupac amaru</h3> -13.531997397145448, -71.9258347097015 <p>Gym de combate</p></div>', -13.531997397145448, -71.9258347097015, 'img/gym.png'],
-          ['<div class="color"><h3>Guacamayo Gigante</h3> -13.529567832902222, -71.95719061078722 <p>Gym de combate</p></div>', -13.529567832902222, -71.95719061078722, 'img/gym.png'],
-          ['<div class="color"><h3>Parque infaltil Kantuta</h3> -13.54543,-71.895195 <p>Gym de combate</p></div>', -13.54543,-71.895195, 'img/gym.png'],
-          ['<div class="color"><h3>Plaza Santiago</h3> -13.525391, -71.983358 <p>Gym de combate</p></div>', -13.525391, -71.983358, 'img/gymex.png'],
-          ['<div class="color"><h3>Mapa del sistema vial</h3> -13.533694,-71.91184199999999 <p>Gym de combate</p></div>', -13.533694,-71.91184199999999, 'img/gymex.png'],
-          ['<div class="color"><h3>MUNIPALACIO HINDU LARAPA</h3> -13.533029,-71.904533 <p>Gym de combate</p></div>', -13.533029,-71.904533, 'img/gymex.png'],
-          ['<div class="color"><h3>Portal san jeronimo</h3> -13.546024,-71.89034 <p>Gym de combate</p></div>', -13.546024,-71.89034, 'img/gym.png'],
-          ['<div class="color"><h3>Juegops recreativos kenedi A</h3> -13.531379,-71.952026 <p>Gym de combate</p></div>', -13.531379,-71.952026, 'img/gym.png'],
-          ['<div class="color"><h3>Condor apuchin</h3> -13.528293,-71.93991 <p>Gym de combate</p></div>', -13.528293,-71.93991, 'img/gym.png'],      
-          ['<div class="color"><h3>Loza de ttio 4to</h3> -13.533958,-71.958724 <p>Gym de combate</p></div>', -13.533958,-71.958724, 'img/gym.png'],
-          ['<div class="color"><h3>Loza los Nogales</h3> -13.540069,-71.937843 <p>Gym de combate</p></div>', -13.540069,-71.937843, 'img/gym.png'],
-          ['<div class="color"><h3>Plaza Regocijo</h3> -13.517054, -71.980131 <p>Gym de combate</p></div>', -13.517054, -71.980131, 'img/gym.png'],
-          ['<div class="color"><h3>Cruz Tica Tica</h3> -13.507221,-71.995285 <p>Gym de combate</p></div>', -13.507221,-71.995285, 'img/gym.png'],
-          ['<div class="color"><h3>Parque Clorinda Matto de Turner</h3> -13.533632, -71.975676 <p>Gym de combate</p></div>', -13.533632, -71.975676, 'img/gym.png'],
-          ['<div class="color"><h3>El Cusco a Garcilazo</h3> -13.521120, -71.967336 <p>Gym de combate</p></div>', -13.521120, -71.967336, 'img/gym.png'],
-          ['<div class="color"><h3>UAC TURISMO</h3> -13.528940, -71.970418 <p>Gym de combate</p></div>', -13.528940, -71.970418, 'img/gym.png'],
-          ['<div class="color"><h3>Entrada Urpicha</h3> -13.530599, -71.969430 <p>Gym de combate</p></div>', -13.530599, -71.969430, 'img/gym.png'],
-          ['<div class="color"><h3>Cancha Deportiva Arco Tica Tica</h3> -13.510911,-72.008510 <p>Gym de combate</p></div>', -13.510911,-72.008510, 'img/gym.png'],
-          ['<div class="color"><h3>Fuente de agua de 4to de san Sebastian</h3> -13.530109, -71.932425 <p>Gym de combate</p></div>', -13.530109, -71.932425, 'img/gym.png'],
-          ['<div class="color"><h3>SUNAT de san Sebastian</h3> -13.530830, -71.930862 <p>Gym de combate</p></div>', -13.530830, -71.930862, 'img/gym.png'],
-          ['<div class="color"><h3>Canchita</h3> -13.536608, -71.950145 <p>Gym de combate</p></div>', -13.536608, -71.950145, 'img/gym.png'],
-          ['<div class="color"><h3>Gruta Sra de Fátima</h3> -13.533221, -71.965707 <p>Gym de combate</p></div>', -13.533221, -71.965707, 'img/gym.png'],
-          ['<div class="color"><h3>Capilla Bolognesi</h3> -13.533181, -71.985445 <p>Gym de combate</p></div>', -13.533181, -71.985445, 'img/gym.png'],
-          ['<div class="color"><h3>Losa Deportiva Los Jardines</h3> -13.535310, -71.990214 <p><img style="width: 100%;" src="//lh3.googleusercontent.com/AKKm_SvQMmOqf4-utQjtvkIOJAYDXPp3mkBz0dYwjeHHhYfRdYIp47Z9S6wW6NEx9NWJPkCw0oL_6F0pdko4=s130"></p></div>', -13.535310, -71.990214, 'img/gym.png'],
-          ['<div class="color"><h3>Nido Charmander</h3> -13.508363, -71.981724 <p>Complejo de Sacsayhuaman</p> </div>', -13.508363, -71.981724, 'pokes/4.png'],
-          ['<div class="color"><h3>Nido Wailmer</h3> -13.518413, -71.981355 <p>Plaza santiago</p> </div>', -13.518413, -71.981355, 'pokes/320.png']
-        ];
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15,
-          center: new google.maps.LatLng(-13.525154, -71.950126),
-          mapTypeId: google.maps.MapTypeId.ROADMAP,
-          draggable : true,
-          scrollwheel: true,
-          panControl: true,
-          streetViewControl: false,
-          scaleControl: true,
-          mapTypeControl: false,
-          overviewMapControl: true,
-          gestureHandling: "greedy", //a one finger use
-          styles: [{
-            "featureType": "water",
-            "elementType": "geometry",
-            "stylers": [{ 
-              "color": "#46bcec",
-              "width": "30px" }],
-          }],
+
+
+
+
+
+<script>
+
+ (function(){
+    new Clipboard('#copy-button');
+})();
+
+jQuery.noConflict();
+jQuery(document).ready(function ($) {
+    // map
+    var map;
+
+    // marcadores / lojas e pontos de distribuição no mapa
+    var markers = [];
+
+    // cluster var para agrupar marcadores próximos em zoom pequeno
+    var mc;
+    
+    // bounds / função limites do mapa
+    var bounds = new google.maps.LatLngBounds();
+    
+    
+
+    /**
+     * Função inicializar mapa
+     */
+    function initMap() {
+        // localização inicial
+        var myLatlng = new google.maps.LatLng(
+            -13.531379,-71.952026
+        );
+
+        // opções mapa inicial
+        var mapOptions = {
+            zoom: 14, // zoom inicial mapa
+            maxZoom: 21, // zoom máximo
+            center: myLatlng, // localização inicial
+            draggable : true,
+            scrollwheel: true,
+            panControl: true,
+            streetViewControl: false,
+            scaleControl: true,
+            mapTypeControl: false,
+            overviewMapControl: true,
+            mapTypeId: google.maps.MapTypeId.ROADMAP, // tipo de mapa
+            styles:[
+                  {
+                    "featureType": "poi.business",
+                    "stylers": [
+                      {
+                        "visibility": "off"
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "road",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                      {
+                        "visibility": "off"
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "transit",
+                    "stylers": [
+                      {
+                        "visibility": "off"
+                      }
+                    ]
+                  }
+                ]
+        };
+
+        // registra mapa na div #mapa como variável mapgoogle
+        map = new google.maps.Map(document.getElementById("mapgoogle"), mapOptions);
+
+        // Extrai informações do locais.json para criar marcadores
+        $.getJSON(mapJsonFile, function (stores, textStatus) {
+            // loop para criar marcadores no mapa usando
+            // função addMarker()
+            // para cada array em stores tem informações de um store
+            $.each(stores, function (i, store) {                
+                addMarker(store);
+            });
+
+            // cluster config
+            // ajustes para exibição de ícone com marcadores agrupados
+            var optionsCluster = {
+                maxZoom: 13, // máximo zoom exibido cluster
+                styles: [
+                    {
+                        textColor: '#ffffff', // cor texto cluster
+                        url: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m1.png', // imagem fundo do cluster
+                        width: 53, // largura da imagem
+                        height: 52 // altura da imagem
+                    }
+                ]
+            };        
+
+            // suporte a clusters adicionado ao map
+            // map = variável do mapa
+            // markers = array de marcadores
+            // optionsCluster = options do cluster configurados acima
+            mc = new MarkerClusterer(map, markers, optionsCluster);
+            
+            // zoom para todos marcadores visíveis no ínicio
+            // if (bounds.f.b != 1 && bounds.f.f != -1) {
+            //     // map.fitBounds(bounds);
+            // }
         });
-        var infowindow = new google.maps.InfoWindow();
-        var marker, i;
-        for (i = 0; i < locations.length; i++) {
-            marker = new google.maps.Marker({
-            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-            map: map,
-            title: 'PEPSized Coffee',
-            icon: locations[i][3],
-            type: 'library',
-          });
-          google.maps.event.addListener(marker, 'click', (function(marker, i) {
-            return function() {
-              infowindow.setContent(locations[i][0]);
-              infowindow.open(map, marker);
-            }
-          })(marker, i));
-          map.setOptions({ minZoom:13, maxZoom: 18 });
-        }
-        function toggleBounce() {
-          if (marker.getAnimation() !== null) {
-            marker.setAnimation(null);
-          } else {
-            marker.setAnimation(google.maps.Animation.BOUNCE);
-          }
-        }
-      /*var map;
-      function initMap() {
-        var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+    }
+
+    /**
+     * Função para registro de marcadores
+     */
+    function addMarker(markerinfo) {
+        // titulo do marcador
+        var title = markerinfo.name;
+        if (title === null) { title = ''; }
+
+        // endereco completo do marcador, deixa em branco se não há
+        var address = markerinfo.location.full_address;
+        if (address === null) { address = ''; }
+
+        // telefone do marcador, deixar em branco se não há
+        //var phone = markerinfo.phone;
+        //if (phone === null) { phone = ''; }
+
+        // pais do marcador
+        var country = markerinfo.location.country.slug;
+        
+        // estado do marcador
+        //var state = markerinfo.location.state.slug;
+
+        // cidade do marcador
+        //var city = markerinfo.location.city.slug;
+
+        // setor do marcador
+        //var district = markerinfo.location.district.slug;
+        
+        // tipo do marcador
+        //var type = markerinfo.type.slug;
+
+        // todas categorias em um array
+        var categories = [
+            country
+        ];
+
+        // posição lat e lng do marcador
+        var position = new google.maps.LatLng(markerinfo.location.coordinates.lat, markerinfo.location.coordinates.lng);
+
+        // imagens de marcadores personalizados
+        //var image_point = "https://cdn.rawgit.com/rhcarlosweb/google-maps-markers/9cafdad0/assets/images/ponto.png";
+        //var image_store = "https://cdn.rawgit.com/rhcarlosweb/google-maps-markers/9cafdad0/assets/images/loja.png";
+        var gym = "img/gym.png";
+        var gymex = "img/gymex.png";
+        var nido = "img/nido.png";
+        var stop = "img/stop.png";
+
+        // imagem marcadores personalizados para cada tipo de local
         var icons = {
-          parking: {
-            name: 'Parking',
-            icon: iconBase + 'parking_lot_maps.png'
-          },
-          library: {
-            name: 'Library',
-            icon: iconBase + 'library_maps.png'
-          },
-          info: {
-            name: 'Info',
-            icon: iconBase + 'info-i_maps.png'
-          }
-        };*/
-      </script>
+            gym: {icon: gym},
+            gymex: {icon: gymex},
+            stop: {icon: stop},
+            nido: {icon: nido}
+        };
 
-    </body>
+        // registro de marcadores
+        var marker = new google.maps.Marker({
+            title: title, // titulo marcador
+            position: position, // posicao marcador
+            icon: icons[markerinfo.location.country.slug].icon, // usa icone certo para cada tipo de marcador
+            animation: google.maps.Animation.DROP, // animação drop marcador
+            map: map, // registra marcador na variável map
+            category: categories
+        });
+        
+        // adiciona markers ao array
+        markers.push(marker);
 
-    </html>
+        // limite adicionado com posição de cada marcador
+        bounds.extend(marker.position);
+
+        // registro de conteúdo na caixa de informações
+        // do marcador
+        var infowindow = new google.maps.InfoWindow({
+            content: '<div class="title-map"><h5>' + title + '</h5></div>' + '<div class="endereco"><input style="border: 0;margin-right: 6px;" id="foo" value="' + address + '"><button id="copy-button" class="" data-clipboard-target="#foo"><img width="12px" src="https://clipboardjs.com/assets/images/clippy.svg" alt="Copy to clipboard" title="Copy to clipboard"></button></div>'
+        });
+
+        // exibe marcador quando clicado
+        marker.addListener('click', function () {
+            // zoom no marcador
+            // map.setZoom(14);
+
+            // centraliza mapa na posição do marcador
+            // map.setCenter(marker.getPosition());
+            
+            // abre caixa informações marcador
+            infowindow.open(map, marker);
+        });
+
+        // Exibe marcador quando hover
+        // marker.addListener('mouseover', function() {
+        //     infowindow.open(map, marker);
+        // });
+        // marker.addListener('mouseout', function() {
+        //     infowindow.close();
+        // });
+
+    }
+
+    /**
+     * Form filtro
+     */
+    $('#buscar-locais').submit(function(event) {
+        event.preventDefault();
+        
+        // valores filtros selecionado
+        var countryValSel = [
+            $('#pais').val(),
+        ];
+
+        // limite do mapa
+        bounds = new google.maps.LatLngBounds();
+
+        for (i = 0; i < markers.length; i++) {
+            // addMarker(markers[i]);
+            
+            var mark = markers[i];
+
+            // If is same category or category not picked
+            // if ((typeof mark.category == 'object' && mark.category.indexOf(countryValSel) >= 0) || countryValSel.length === 0) {
+            if (objectsMatch(mark.category, countryValSel) || countryValSel.length === 0) {
+                mark.setVisible(true);
+                mc.setIgnoreHidden(true);
+                bounds.extend(mark.getPosition());
+            }
+            // Categories don't match 
+            else {                
+                mc.setIgnoreHidden(true);
+                mark.setVisible(false);
+            }
+
+        }
+
+        // zoom mapa aos marcadores selecionados com 
+        // a categoria
+        map.fitBounds(bounds);
+    });
+
+    // init map on load page
+    $(window).load(function () {
+        initMap();
+    });
+
+
+    /**
+     * Função verifica se objetos são identicos
+     */
+    function objectsMatch(roll, filterObject) {
+        var match = true;
+        for (var prop in filterObject) {
+            if (!roll.hasOwnProperty(prop) ||
+                !filterObject.hasOwnProperty(prop)) continue;
+            if (roll[prop] != filterObject[prop] &&
+                filterObject[prop] !== ''
+            ) {
+                match = false;
+            }
+        }
+        return match;
+    }
+
+});
+
+
+
+
+
+// Create the search box and link it to the UI element.
+        var input = document.getElementById('pac-input');
+        var searchBox = new google.maps.places.SearchBox(input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        // Bias the SearchBox results towards current map's viewport.
+        map.addListener('bounds_changed', function() {
+          searchBox.setBounds(map.getBounds());
+        });
+</script>

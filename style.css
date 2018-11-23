@@ -231,3 +231,22 @@
   right: 10px;
   top: 10px;
 }
+/* Mapa    ========================================================================== */
+/**stilos de mapa**/
+.topbar{
+  font-family: arial;
+}
+.topbar a{
+  color: #00b8ff;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 0.5em;
+    display: block;
+}
+.topbar h1{
+  margin: 0;
+  color: #00b8ff;
+  font-size: 1.8em;
+    font-family: fantasy;
+  text-align: center;
+}

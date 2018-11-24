@@ -26,7 +26,9 @@
 </head>
 <div class="topbar">
         <div class="grupo">
-          <div class="col-xs-12"><h1>TEAM MYSTIC CUSCO</h1></div>
+          <div class="caja base-100 movil-50 tablet-1-3 web-1-3 hd-1-3"><div class="Cdcount"> <b>CD empieza en:</b> <span id="clock"></span></div></div>
+          <div class="caja base-100 movil-50 tablet-1-3 web-1-3 hd-1-3"><h1>TEAM MYSTIC CUSCO</h1></div>
+          <div class="caja base-100 movil-50 tablet-1-3 web-1-3 hd-1-3"><div class="Cdcount"> <b>Migración en:</b> <span id="demo"></span></div></div>
         </div>
 </div>
 
@@ -134,298 +136,104 @@
   </div>
 </div>
 
-
-
-
+<script src="event.js"></script>
+<script>
+// CD.
+// Set the date we're counting down to
+var countDownDate = new Date("Nov 28, 2018 19:00:00").getTime();
+// Update the count down every 1 second
+var x = setInterval(function() {
+  // Get todays date and time
+  var now = new Date().getTime();
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "MIGRO EL NIDO";
+  }
+}, 1000);
+</script>
 
 
 
 <script>
+    /*const countdowns = document.querySelectorAll('.countdown')
+    const getRandom = () =>  Math.round(Math.random())
+    if(location.href.includes('illustrator')) {
+        countdowns[0].classList.remove('hide')
+    } else  if(location.href.includes('aws')) {
+        countdowns[1].classList.remove('hide')
+    } else {
+        countdowns[getRandom()].classList.remove('hide')
+    }*/
 
- (function(){
-    new Clipboard('#copy-button');
-})();
+const timer = {};
 
-jQuery.noConflict();
-jQuery(document).ready(function ($) {
-    // map
-    var map;
+// obtener el tiempo restante
+timer.getRemainingTime = function (deadline) {
+  "use strict";
 
-    // marcadores / lojas e pontos de distribuição no mapa
-    var markers = [];
+  var now = new Date(),
+      endTime = new Date(deadline),
+      remainTime = (Date.parse(deadline) - now + 1000) / 1000,
+      timeOffset = (now.getTimezoneOffset() - endTime.getTimezoneOffset()) / 60,
+      days = ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+      months = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'setiembre', 'octubre', 'noviembre', 'diciembre'],
+      endDay = days[endTime.getDay()],
+      endDate = endTime.getDate(),
+      endMonth = months[endTime.getMonth()],
+      endHours = endTime.getHours() + timeOffset,
+      isPm = endHours >= 12,
+      endMinutes = ('0' + endTime.getMinutes()).slice(-2),
+      remainSeconds = ('0' + Math.floor(remainTime % 60)).slice(-2),
+      remainMinutes = ('0' + Math.floor(remainTime / 60 % 60)).slice(-2),
+      remainHours = ('0' + Math.floor(remainTime / 3600 % 24)).slice(-2),
+      remainDays = Math.floor(remainTime / (3600 * 24));
 
-    // cluster var para agrupar marcadores próximos em zoom pequeno
-    var mc;
-    
-    // bounds / função limites do mapa
-    var bounds = new google.maps.LatLngBounds();
-    
-    
+  endHours = isPm ? endHours = endHours == 12 ? endHours : endHours - 12 : endHours;
+  var endFormated = endDay + ' ' + endDate + ' de ' + endMonth + ' ' + endHours + ':' + endMinutes;
+  endFormated = isPm ? endFormated + 'pm' : endFormated + 'am';
 
-    /**
-     * Função inicializar mapa
-     */
-    function initMap() {
-        // localização inicial
-        var myLatlng = new google.maps.LatLng(
-            -13.531379,-71.952026
-        );
+  return {
+    remainDays: remainDays,
+    remainHours: remainHours,
+    remainMinutes: remainMinutes,
+    remainSeconds: remainSeconds,
+    remainTime: remainTime,
+    endDay: endDay,
+    endDate: endDate,
+    endMonth: endMonth,
+    endHours: endHours,
+    endMinutes: endMinutes,
+    endFormated: endFormated
+  };
+};
 
-        // opções mapa inicial
-        var mapOptions = {
-            zoom: 14, // zoom inicial mapa
-            maxZoom: 21, // zoom máximo
-            center: myLatlng, // localização inicial
-            draggable : true,
-            scrollwheel: true,
-            panControl: true,
-            streetViewControl: false,
-            scaleControl: true,
-            mapTypeControl: false,
-            overviewMapControl: true,
-            mapTypeId: google.maps.MapTypeId.ROADMAP, // tipo de mapa
-            styles:[
-                  {
-                    "featureType": "poi.business",
-                    "stylers": [
-                      {
-                        "visibility": "off"
-                      }
-                    ]
-                  },
-                  {
-                    "featureType": "road",
-                    "elementType": "labels.icon",
-                    "stylers": [
-                      {
-                        "visibility": "off"
-                      }
-                    ]
-                  },
-                  {
-                    "featureType": "transit",
-                    "stylers": [
-                      {
-                        "visibility": "off"
-                      }
-                    ]
-                  }
-                ]
-        };
+// ejecutar el countDown
+timer.run = function (deadline, elem) {
+  "use strict";
 
-        // registra mapa na div #mapa como variável mapgoogle
-        map = new google.maps.Map(document.getElementById("mapgoogle"), mapOptions);
-
-        // Extrai informações do locais.json para criar marcadores
-        $.getJSON(mapJsonFile, function (stores, textStatus) {
-            // loop para criar marcadores no mapa usando
-            // função addMarker()
-            // para cada array em stores tem informações de um store
-            $.each(stores, function (i, store) {                
-                addMarker(store);
-            });
-
-            // cluster config
-            // ajustes para exibição de ícone com marcadores agrupados
-            var optionsCluster = {
-                maxZoom: 13, // máximo zoom exibido cluster
-                styles: [
-                    {
-                        textColor: '#ffffff', // cor texto cluster
-                        url: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m1.png', // imagem fundo do cluster
-                        width: 53, // largura da imagem
-                        height: 52 // altura da imagem
-                    }
-                ]
-            };        
-
-            // suporte a clusters adicionado ao map
-            // map = variável do mapa
-            // markers = array de marcadores
-            // optionsCluster = options do cluster configurados acima
-            mc = new MarkerClusterer(map, markers, optionsCluster);
-            
-            // zoom para todos marcadores visíveis no ínicio
-            // if (bounds.f.b != 1 && bounds.f.f != -1) {
-            //     // map.fitBounds(bounds);
-            // }
-        });
+  var timerUpdate = setInterval(function () {
+    var el = document.getElementById(elem),
+        t = timer.getRemainingTime(deadline);
+    el.innerHTML = '\n      <span class="next-lesson__remain">\n        <span>' + t.remainDays + '</span>d:<span>' + t.remainHours + '</span>h:<span>' + t.remainMinutes + '</span>m:<span>' + t.remainSeconds + '</span>s\n      </span>\n    ';
+    if (t.remainTime <= 1) {
+      clearInterval(timerUpdate);
+      el.innerHTML = '¡Empezo el evento!';
     }
+  }, 1000);
+};
 
-    /**
-     * Função para registro de marcadores
-     */
-    function addMarker(markerinfo) {
-        // titulo do marcador
-        var title = markerinfo.name;
-        if (title === null) { title = ''; }
-
-        // endereco completo do marcador, deixa em branco se não há
-        var address = markerinfo.location.full_address;
-        if (address === null) { address = ''; }
-
-        // telefone do marcador, deixar em branco se não há
-        //var phone = markerinfo.phone;
-        //if (phone === null) { phone = ''; }
-
-        // pais do marcador
-        var country = markerinfo.location.country.slug;
-        
-        // estado do marcador
-        //var state = markerinfo.location.state.slug;
-
-        // cidade do marcador
-        //var city = markerinfo.location.city.slug;
-
-        // setor do marcador
-        //var district = markerinfo.location.district.slug;
-        
-        // tipo do marcador
-        //var type = markerinfo.type.slug;
-
-        // todas categorias em um array
-        var categories = [
-            country
-        ];
-
-        // posição lat e lng do marcador
-        var position = new google.maps.LatLng(markerinfo.location.coordinates.lat, markerinfo.location.coordinates.lng);
-
-        // imagens de marcadores personalizados
-        //var image_point = "https://cdn.rawgit.com/rhcarlosweb/google-maps-markers/9cafdad0/assets/images/ponto.png";
-        //var image_store = "https://cdn.rawgit.com/rhcarlosweb/google-maps-markers/9cafdad0/assets/images/loja.png";
-        var gym = "img/gym.png";
-        var gymex = "img/gymex.png";
-        var nido = "img/nido.png";
-        var stop = "img/stop.png";
-
-        // imagem marcadores personalizados para cada tipo de local
-        var icons = {
-            gym: {icon: gym},
-            gymex: {icon: gymex},
-            stop: {icon: stop},
-            nido: {icon: nido}
-        };
-
-        // registro de marcadores
-        var marker = new google.maps.Marker({
-            title: title, // titulo marcador
-            position: position, // posicao marcador
-            icon: icons[markerinfo.location.country.slug].icon, // usa icone certo para cada tipo de marcador
-            animation: google.maps.Animation.DROP, // animação drop marcador
-            map: map, // registra marcador na variável map
-            category: categories
-        });
-        
-        // adiciona markers ao array
-        markers.push(marker);
-
-        // limite adicionado com posição de cada marcador
-        bounds.extend(marker.position);
-
-        // registro de conteúdo na caixa de informações
-        // do marcador
-        var infowindow = new google.maps.InfoWindow({
-            content: '<div class="title-map"><h5>' + title + '</h5></div>' + '<div class="endereco"><input style="border: 0;margin-right: 6px;" id="foo" value="' + address + '"><button id="copy-button" class="" data-clipboard-target="#foo"><img width="12px" src="https://clipboardjs.com/assets/images/clippy.svg" alt="Copy to clipboard" title="Copy to clipboard"></button></div>'
-        });
-
-        // exibe marcador quando clicado
-        marker.addListener('click', function () {
-            // zoom no marcador
-            // map.setZoom(14);
-
-            // centraliza mapa na posição do marcador
-            // map.setCenter(marker.getPosition());
-            
-            // abre caixa informações marcador
-            infowindow.open(map, marker);
-        });
-
-        // Exibe marcador quando hover
-        // marker.addListener('mouseover', function() {
-        //     infowindow.open(map, marker);
-        // });
-        // marker.addListener('mouseout', function() {
-        //     infowindow.close();
-        // });
-
-    }
-
-    /**
-     * Form filtro
-     */
-    $('#buscar-locais').submit(function(event) {
-        event.preventDefault();
-        
-        // valores filtros selecionado
-        var countryValSel = [
-            $('#pais').val(),
-        ];
-
-        // limite do mapa
-        bounds = new google.maps.LatLngBounds();
-
-        for (i = 0; i < markers.length; i++) {
-            // addMarker(markers[i]);
-            
-            var mark = markers[i];
-
-            // If is same category or category not picked
-            // if ((typeof mark.category == 'object' && mark.category.indexOf(countryValSel) >= 0) || countryValSel.length === 0) {
-            if (objectsMatch(mark.category, countryValSel) || countryValSel.length === 0) {
-                mark.setVisible(true);
-                mc.setIgnoreHidden(true);
-                bounds.extend(mark.getPosition());
-            }
-            // Categories don't match 
-            else {                
-                mc.setIgnoreHidden(true);
-                mark.setVisible(false);
-            }
-
-        }
-
-        // zoom mapa aos marcadores selecionados com 
-        // a categoria
-        map.fitBounds(bounds);
-    });
-
-    // init map on load page
-    $(window).load(function () {
-        initMap();
-    });
-
-
-    /**
-     * Função verifica se objetos são identicos
-     */
-    function objectsMatch(roll, filterObject) {
-        var match = true;
-        for (var prop in filterObject) {
-            if (!roll.hasOwnProperty(prop) ||
-                !filterObject.hasOwnProperty(prop)) continue;
-            if (roll[prop] != filterObject[prop] &&
-                filterObject[prop] !== ''
-            ) {
-                match = false;
-            }
-        }
-        return match;
-    }
-
-});
-
-
-
-
-
-// Create the search box and link it to the UI element.
-        var input = document.getElementById('pac-input');
-        var searchBox = new google.maps.places.SearchBox(input);
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-        // Bias the SearchBox results towards current map's viewport.
-        map.addListener('bounds_changed', function() {
-          searchBox.setBounds(map.getBounds());
-        });
+addEventListener('load', () => {
+    timer.run('Nov 30 2018 16:00:00 GMT-0500', 'clock')
+})
 </script>

@@ -73,6 +73,9 @@
 <button type="button" class="btn btn-primary" id="MdBottom" data-toggle="modal" data-target="#exampleModal">
   Enviar Nuevo
 </button>
+<div id="deleteCookies">
+    <input type="button" name="myButton" value="Clear Caché" onClick="deleteAllCookies()">
+</div>
 
 <!-- Modal -->
 <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -127,9 +130,7 @@
   </div>
 </div>
 
-<div id="deleteCookies">
-    Eliminar Caché <input type="button" name="myButton" value="Eliminar Cookies" onClick="deleteAllCookies()">
-  </div>
+
 
 <script src="event.js"></script>
 <script>

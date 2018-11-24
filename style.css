@@ -256,3 +256,8 @@
   text-align: left;
   float: left;
 }
+#deleteCookies{
+  bottom: 0%;
+  left: 50%;
+  position: absolute;
+}

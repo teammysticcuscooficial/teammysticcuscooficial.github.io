@@ -113,6 +113,7 @@
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.517422,"lng":-71.978218},"full_address":"-13.517422,-71.978218"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.515717,"lng":-71.981213},"full_address":"-13.515717,-71.981213"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.516365,"lng":-71.980699},"full_address":"-13.516365,-71.980699"}},
+{"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.519708,"lng":-71.980394},"full_address":"-13.519708,-71.980394"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.534544,"lng":-71.932310},"full_address":"-13.534544,-71.932310"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.524660,"lng":-71.948890},"full_address":"-13.524660,-71.948890"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.525673,"lng":-71.951004},"full_address":"-13.525673,-71.951004"}},
@@ -134,5 +135,7 @@
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.53327,"lng":-71.97240},"full_address":"-13.53327,-71.97240"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.51563,"lng":-71.98056},"full_address":"-13.51563,-71.98056"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.526719,"lng":-71.957695},"full_address":"-13.526719,-71.957695"}},
-{"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.515567,"lng":-71.981315},"full_address":"-13.515567,-71.981315"}}
+{"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.515567,"lng":-71.981315},"full_address":"-13.515567,-71.981315"}},
+{"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.518279,"lng":-71.979697},"full_address":"-13.518279,-71.979697"}},
+{"name":"Mision Wiggytuff","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.53272,"lng":-71.96811},"full_address":"-13.53272,-71.96811"}}
 ]

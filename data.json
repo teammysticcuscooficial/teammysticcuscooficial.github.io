@@ -88,5 +88,6 @@
 {"name":"Mision Caterpi","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.517101,"lng":-71.950797},"full_address":"-13.517101, -71.950797"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52101,"lng":-71.95905},"full_address":"-13.52101,-71.95905"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.51880,"lng":-71.96016},"full_address":"-13.51880,-71.96016"}},
+{"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52301,"lng":-71.95990},"full_address":"-13.52301,-71.95990"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.523215,"lng":-71.959229},"full_address":"-13.523215, -71.959229"}}
 ]

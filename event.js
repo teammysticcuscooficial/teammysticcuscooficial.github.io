@@ -216,6 +216,7 @@ jQuery(document).ready(function ($) {
         // valores filtros selecionado
         var countryValSel = [
             $('#pais').val(),
+            //$('#estado').val(),
         ];
 
         // limite do mapa

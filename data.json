@@ -94,12 +94,14 @@
 {"name":"Mision Golbat","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.517662,"lng":-71.952490},"full_address":"-13.517662,-71.952490"}},
 {"name":"Mision Golbat","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.515401,"lng":-71.951630},"full_address":"-13.515401,-71.951630"}},
 {"name":"Mision Golbat","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.53187,"lng":-71.96793},"full_address":"-13.53187,-71.96793"}},
+{"name":"Mision Golbat","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.53067,"lng":-71.96701},"full_address":"-13.53067,-71.96701"}},
 {"name":"Mision Gastly","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.520347,"lng":-71.960010},"full_address":"-13.520347,-71.960010"}},
 {"name":"Mision Caterpie","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.525401,"lng":-71.945550},"full_address":"-13.525401,-71.945550"}},
 {"name":"Mision Caterpie","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.518320,"lng":-71.961960},"full_address":"-13.518320,-71.961960"}},
 {"name":"Mision Machop","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.526982,"lng":-71.951490},"full_address":"-13.526982,-71.951490"}},
 {"name":"Mision Machop","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.53294,"lng":-71.96893},"full_address":"-13.53294,-71.96893"}},
 {"name":"Mision Clefable","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.528148,"lng":-71.951790},"full_address":"-13.528148,-71.951790"}},
+{"name":"Mision Clefable","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.53060,"lng":-71.96801},"full_address":"-13.53060,-71.96801"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.529769,"lng":-71.943200},"full_address":"-13.529769,-71.943200"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.530596,"lng":-71.946810},"full_address":"-13.530596,-71.946810"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.529738,"lng":-71.946030},"full_address":"-13.529738,-71.946030"}},
@@ -143,5 +145,6 @@
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.520528,"lng":-71.979744},"full_address":"-13.520528,-71.979744"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.544325,"lng":-71.883800},"full_address":"-13.544325,-71.883800"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.544504,"lng":-71.884060},"full_address":"-13.544504,-71.884060"}},
+{"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.53115,"lng":-71.96687},"full_address":"-13.53115,-71.96687"}},
 {"name":"Mision Wiggytuff","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.53272,"lng":-71.96811},"full_address":"-13.53272,-71.96811"}}
 ]

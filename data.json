@@ -129,6 +129,9 @@
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.519172,"lng":-71.98177},"full_address":"-13.519172,-71.98177"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.515231,"lng":-71.978476},"full_address":"-13.515231,-71.978476"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.536787,"lng":-71.905940},"full_address":"-13.536787,-71.905940"}},
+{"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.535171,"lng":-71.905730},"full_address":"-13.535171,-71.905730"}},
+{"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.507338,"lng":-71.98182300000001},"full_address":"-13.507338,-71.98182300000001"}},
+{"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.507857,"lng":-71.984855},"full_address":"-13.507857,-71.984855"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.534544,"lng":-71.932310},"full_address":"-13.534544,-71.932310"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.524660,"lng":-71.948890},"full_address":"-13.524660,-71.948890"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.525673,"lng":-71.951004},"full_address":"-13.525673,-71.951004"}},
@@ -148,6 +151,7 @@
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52954,"lng":-71.97130},"full_address":"-13.52954,-71.97130"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.515356,"lng":-71.977026},"full_address":"-13.515356,-71.977026"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.535871,"lng":-71.905780},"full_address":"-13.535871,-71.905780"}},
+{"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.534354,"lng":-71.908250},"full_address":"-13.534354,-71.908250"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.532719,"lng":-71.920090},"full_address":"-13.532719,-71.920090"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.531197,"lng":-71.929720},"full_address":"-13.531197,-71.929720"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.530200,"lng":-71.933014},"full_address":"-13.530200,-71.933014"}},
@@ -175,6 +179,7 @@
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.517568,"lng":-71.975666},"full_address":"-13.517568,-71.975666"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.515743,"lng":-71.975739},"full_address":"-13.515743,-71.975739"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.515068,"lng":-71.97731899999999},"full_address":"-13.515068,-71.97731899999999"}},
+{"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.534797,"lng":-71.907610},"full_address":"-13.534797,-71.907610"}},
 {"name":"Mision Wiggytuff","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.53272,"lng":-71.96811},"full_address":"-13.53272,-71.96811"}},
 {"name":"Mision 1000 polvos","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.516426,"lng":-71.978131},"full_address":"-13.516426,-71.978131"}},
 {"name":"Mision spinda","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.518446,"lng":-71.97582},"full_address":"-13.518446,-71.97582"}},
@@ -182,5 +187,6 @@
 {"name":"Mision spinda","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.520069,"lng":-71.97583400000001},"full_address":"-13.520069,-71.97583400000001"}},
 {"name":"Mision Caramelo raro","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.522678,"lng":-71.98201899999999},"full_address":"-13.522678,-71.98201899999999"}},
 {"name":"Mision Caramelo raro","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.543623,"lng":-71.888380},"full_address":"-13.543623,-71.888380"}},
+{"name":"Mision Caramelo raro","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.509092,"lng":-71.982857},"full_address":"-13.509092,-71.982857"}},
 {"name":"Mision Pineco","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52774,"lng":-71.97088},"full_address":"-13.52774,-71.97088"}}
 ]

@@ -127,6 +127,10 @@
   </div>
 </div>
 
+<div id="deleteCookies">
+    Eliminar Caché <input type="button" name="myButton" value="Eliminar Cookies" onClick="deleteAllCookies()">
+  </div>
+
 <script src="event.js"></script>
 <script>
 // CD.
@@ -228,3 +232,18 @@ addEventListener('load', () => {
     timer.run('Nov 30 2018 16:00:00 GMT-0500', 'clock')
 })
 </script>
+
+<script type="text/javascript">
+    function deleteAllCookies() {
+      if (confirm("Eliminar todas las Cookies?")) {
+        la_cookie = document.cookie.split("; ")
+        fecha_fin = new Date
+        fecha_fin.setDate(fecha_fin.getDate() - 1)
+        for (i = 0; i < la_cookie.length; i++) {
+          mi_cookie = la_cookie[i].split("=")[0]
+          document.cookie = mi_cookie + "=;expires=" + fecha_fin.toGMTString()
+        }
+        location.reload(true)
+      }
+    }
+  </script>

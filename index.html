@@ -70,43 +70,34 @@
 
 
 <!-- Button trigger modal -->
-<button style="display: none;" type="button" class="btn btn-primary" id="MdBottom" data-toggle="modal" data-target="#exampleModal">
-  Add New
+<button type="button" class="btn btn-primary" id="MdBottom" data-toggle="modal" data-target="#exampleModal">
+  Enviar Nuevo
 </button>
 
 <!-- Modal -->
 <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">AÑADIR, EDITAR O ELIMINAR</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
+      
       <div class="modal-body">
         <div class="row">
         <div class="col-md-12 ml-auto">
              <form>
               <div class="form-group">
-                <label for="recipient-name" class="col-form-label">Nombre:</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <label for="recipient-name" class="col-form-label">Nombre (Gym, Nido, Mision):</label>
+                <input type="text" class="form-control" id="pkname" placeholder="Cusco en una ventana">
               </div>
               <div class="form-group">
-                <label for="recipient-name" class="col-form-label">Tipo:</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <label for="recipient-name" class="col-form-label">Tipo: (Gym, Nido, Mision)</label>
+                <input type="text" class="form-control" id="pktipo" placeholder="Mision">
               </div>
               <div class="form-group">
-                <label for="recipient-name" class="col-form-label">Longitud:</label>
-                <input type="text" class="form-control" id="recipient-name">
-              </div>
-              <div class="form-group">
-                <label for="recipient-name" class="col-form-label">Latitud:</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <label for="recipient-name" class="col-form-label">Longitud & Latitud:</label>
+                <input type="text" class="form-control" id="pklong" placeholder="-13.537897,-71.943762">
               </div>
             </form>
         </div>
-        <div class="col-md-12 ml-auto"><h5>DATOS RECOPILADOS</h5></div>
+        <div style="display: none;" class="col-md-12 ml-auto"><h5>DATOS RECOPILADOS</h5>
             <div id="tabla-casificacion">
                 <table class="table">
                     <thead>
@@ -130,7 +121,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-primary">Enviar Datos</button>
       </div>
     </div>
   </div>

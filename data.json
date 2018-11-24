@@ -141,5 +141,7 @@
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.515567,"lng":-71.981315},"full_address":"-13.515567,-71.981315"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.518279,"lng":-71.979697},"full_address":"-13.518279,-71.979697"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.520528,"lng":-71.979744},"full_address":"-13.520528,-71.979744"}},
+{"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.544325,"lng":-71.883800},"full_address":"-13.544325,-71.883800"}},
+{"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.544504,"lng":-71.884060},"full_address":"-13.544504,-71.884060"}},
 {"name":"Mision Wiggytuff","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.53272,"lng":-71.96811},"full_address":"-13.53272,-71.96811"}}
 ]

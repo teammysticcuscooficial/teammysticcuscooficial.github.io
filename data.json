@@ -97,6 +97,7 @@
 {"name":"Mision Caterpie","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.525401,"lng":-71.945550},"full_address":"-13.525401,-71.945550"}},
 {"name":"Mision Caterpie","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.518320,"lng":-71.961960},"full_address":"-13.518320,-71.961960"}},
 {"name":"Mision Machop","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.526982,"lng":-71.951490},"full_address":"-13.526982,-71.951490"}},
+{"name":"Mision Machop","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.53294,"lng":-71.96893},"full_address":"-13.53294,-71.96893"}},
 {"name":"Mision Clefable","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.528148,"lng":-71.951790},"full_address":"-13.528148,-71.951790"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.529769,"lng":-71.943200},"full_address":"-13.529769,-71.943200"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.530596,"lng":-71.946810},"full_address":"-13.530596,-71.946810"}},
@@ -110,6 +111,8 @@
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.53067,"lng":-71.97366},"full_address":"-13.53067,-71.97366"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.517452,"lng":-71.978421},"full_address":"-13.517452,-71.978421"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.517422,"lng":-71.978218},"full_address":"-13.517422,-71.978218"}},
+{"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.515717,"lng":-71.981213},"full_address":"-13.515717,-71.981213"}},
+{"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.516365,"lng":-71.980699},"full_address":"-13.516365,-71.980699"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.534544,"lng":-71.932310},"full_address":"-13.534544,-71.932310"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.524660,"lng":-71.948890},"full_address":"-13.524660,-71.948890"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.525673,"lng":-71.951004},"full_address":"-13.525673,-71.951004"}},
@@ -130,5 +133,6 @@
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.525983,"lng":-71.957640},"full_address":"-13.525983,-71.957640"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.53327,"lng":-71.97240},"full_address":"-13.53327,-71.97240"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.51563,"lng":-71.98056},"full_address":"-13.51563,-71.98056"}},
-{"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.526719,"lng":-71.957695},"full_address":"-13.526719,-71.957695"}}
+{"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.526719,"lng":-71.957695},"full_address":"-13.526719,-71.957695"}},
+{"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.515567,"lng":-71.981315},"full_address":"-13.515567,-71.981315"}}
 ]

@@ -170,6 +170,8 @@
 {"name":"Mision Wiggytuff","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.53272,"lng":-71.96811},"full_address":"-13.53272,-71.96811"}},
 {"name":"Mision 1000 polvos","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.516426,"lng":-71.978131},"full_address":"-13.516426,-71.978131"}},
 {"name":"Mision spinda","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.518446,"lng":-71.97582},"full_address":"-13.518446,-71.97582"}},
+{"name":"Mision spinda","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52972,"lng":-71.96972},"full_address":"-13.52972,-71.96972"}},
+{"name":"Mision spinda","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.520069,"lng":-71.97583400000001},"full_address":"-13.520069,-71.97583400000001"}},
 {"name":"Mision Caramelo raro","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.522678,"lng":-71.98201899999999},"full_address":"-13.522678,-71.98201899999999"}},
 {"name":"Mision Caramelo raro","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.543623,"lng":-71.888380},"full_address":"-13.543623,-71.888380"}},
 {"name":"Mision Pineco","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52774,"lng":-71.97088},"full_address":"-13.52774,-71.97088"}}

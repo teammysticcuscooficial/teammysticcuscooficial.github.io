@@ -84,5 +84,11 @@
 {"name":"Capilla Bolognesi","location":{"country":{"slug":"gym"},"coordinates":{"lat":-13.53322,"lng":-71.98562},"full_address":"-13.53322,-71.98562"}},
 {"name":"Nido Charmander","location":{"country":{"slug":"nido"},"coordinates":{"lat":-13.508363,"lng":-71.981724},"full_address":"-13.508363, -71.981724"}},
 {"name":"Nido Wailmer","location":{"country":{"slug":"nido"},"coordinates":{"lat":-13.518413,"lng":-71.981355},"full_address":"-13.518413, -71.981355"}},
+{"name":"Mision Eclosionar 1 huevos","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.518608,"lng":-71.959460},"full_address":"-13.518608,-71.959460"}},
+{"name":"Mision Eclosionar 3 huevos","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.532688,"lng":-71.91929},"full_address":"-13.532688,-71.91929"}},
+{"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52323,"lng":-71.95879},"full_address":"-13.52323,-71.95879"}},
+{"name":"Mision Magikarp","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.529098,"lng":-71.946870},"full_address":"-13.529098,-71.946870"}},
+{"name":"Mision Voltorb","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.528944,"lng":-71.947754},"full_address":"-13.528944,-71.947754"}},
+{"name":"Mision Golbat","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.524013,"lng":-71.951930},"full_address":"-13.524013,-71.951930"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52323,"lng":-71.95879},"full_address":"-13.52323,-71.95879"}}
 ]

@@ -84,15 +84,5 @@
 {"name":"Capilla Bolognesi","location":{"country":{"slug":"gym"},"coordinates":{"lat":-13.53322,"lng":-71.98562},"full_address":"-13.53322,-71.98562"}},
 {"name":"Nido Charmander","location":{"country":{"slug":"nido"},"coordinates":{"lat":-13.508363,"lng":-71.981724},"full_address":"-13.508363, -71.981724"}},
 {"name":"Nido Wailmer","location":{"country":{"slug":"nido"},"coordinates":{"lat":-13.518413,"lng":-71.981355},"full_address":"-13.518413, -71.981355"}},
-{"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.524006,"lng":-71.961440},"full_address":"-13.524006, -71.961440"}},
-{"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.523763,"lng":-71.962000},"full_address":"-13.523763,-71.962000"}},
-{"name":"Mision Spinda","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.516693,"lng":-71.951922},"full_address":"-13.516693, -71.951922"}},
-{"name":"Mision Caterpi","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.517101,"lng":-71.950797},"full_address":"-13.517101, -71.950797"}},
-{"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52101,"lng":-71.95905},"full_address":"-13.52101,-71.95905"}},
-{"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.51880,"lng":-71.96016},"full_address":"-13.51880,-71.96016"}},
-{"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52301,"lng":-71.95990},"full_address":"-13.52301,-71.95990"}},
-{"name":"Mision Magicarp","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52691,"lng":-71.96230},"full_address":"-13.52691,-71.96230"}},
-{"name":"Mision Pineco","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52403,"lng":-71.95670},"full_address":"-13.52403,-71.95670"}},
-{"name":"Mision Spinda","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52380,"lng":-71.95200},"full_address":"-13.52380,-71.95200"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52323,"lng":-71.95879},"full_address":"-13.52323,-71.95879"}}
 ]

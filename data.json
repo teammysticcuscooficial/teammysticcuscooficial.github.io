@@ -93,6 +93,7 @@
 {"name":"Mision Golbat","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.524013,"lng":-71.951930},"full_address":"-13.524013,-71.951930"}},
 {"name":"Mision Golbat","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.517662,"lng":-71.952490},"full_address":"-13.517662,-71.952490"}},
 {"name":"Mision Golbat","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.515401,"lng":-71.951630},"full_address":"-13.515401,-71.951630"}},
+{"name":"Mision Golbat","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.53187,"lng":-71.96793},"full_address":"-13.53187,-71.96793"}},
 {"name":"Mision Gastly","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.520347,"lng":-71.960010},"full_address":"-13.520347,-71.960010"}},
 {"name":"Mision Caterpie","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.525401,"lng":-71.945550},"full_address":"-13.525401,-71.945550"}},
 {"name":"Mision Caterpie","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.518320,"lng":-71.961960},"full_address":"-13.518320,-71.961960"}},
@@ -114,6 +115,7 @@
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.515717,"lng":-71.981213},"full_address":"-13.515717,-71.981213"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.516365,"lng":-71.980699},"full_address":"-13.516365,-71.980699"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.519708,"lng":-71.980394},"full_address":"-13.519708,-71.980394"}},
+{"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.520767,"lng":-71.980276},"full_address":"-13.520767,-71.980276"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.534544,"lng":-71.932310},"full_address":"-13.534544,-71.932310"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.524660,"lng":-71.948890},"full_address":"-13.524660,-71.948890"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.525673,"lng":-71.951004},"full_address":"-13.525673,-71.951004"}},
@@ -125,6 +127,7 @@
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.523295,"lng":-71.958830},"full_address":"-13.523295,-71.958830"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.53074,"lng":-71.97315},"full_address":"-13.53074,-71.97315"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.518371,"lng":-71.977650},"full_address":"-13.518371, -71.977650"}},
+{"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.519498,"lng":-71.97923900000001},"full_address":"-13.519498,-71.97923900000001"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.532719,"lng":-71.920090},"full_address":"-13.532719,-71.920090"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.531197,"lng":-71.929720},"full_address":"-13.531197,-71.929720"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.530200,"lng":-71.933014},"full_address":"-13.530200,-71.933014"}},
@@ -137,5 +140,6 @@
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.526719,"lng":-71.957695},"full_address":"-13.526719,-71.957695"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.515567,"lng":-71.981315},"full_address":"-13.515567,-71.981315"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.518279,"lng":-71.979697},"full_address":"-13.518279,-71.979697"}},
+{"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.520528,"lng":-71.979744},"full_address":"-13.520528,-71.979744"}},
 {"name":"Mision Wiggytuff","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.53272,"lng":-71.96811},"full_address":"-13.53272,-71.96811"}}
 ]

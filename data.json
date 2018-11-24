@@ -84,6 +84,7 @@
 {"name":"Capilla Bolognesi","location":{"country":{"slug":"gym"},"coordinates":{"lat":-13.53322,"lng":-71.98562},"full_address":"-13.53322,-71.98562"}},
 {"name":"Nido Charmander","location":{"country":{"slug":"nido"},"coordinates":{"lat":-13.508363,"lng":-71.981724},"full_address":"-13.508363, -71.981724"}},
 {"name":"Nido Wailmer","location":{"country":{"slug":"nido"},"coordinates":{"lat":-13.518413,"lng":-71.981355},"full_address":"-13.518413, -71.981355"}},
+{"name":"Nido Ponita","location":{"country":{"slug":"nido"},"coordinates":{"lat":-13.52276,"lng":-71.96643},"full_address":"-13.52276,-71.96643"}},
 {"name":"Mision Eclosionar 1 huevos","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.518608,"lng":-71.959460},"full_address":"-13.518608,-71.959460"}},
 {"name":"Mision Eclosionar 3 huevos","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.532688,"lng":-71.91929},"full_address":"-13.532688,-71.91929"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52323,"lng":-71.95879},"full_address":"-13.52323,-71.95879"}},

@@ -81,6 +81,7 @@
 {"name":"Gruta Sra de Fátima","location":{"country":{"slug":"gym"},"coordinates":{"lat":-13.533221,"lng":-71.965707},"full_address":"-13.533221,-71.965707"}},
 {"name":"Losa Deportiva Los Jardines","location":{"country":{"slug":"gym"},"coordinates":{"lat":-13.535310,"lng":-71.990214},"full_address":"-13.535310, -71.990214"}},
 {"name":"Virgen Natividad De Almudena","location":{"country":{"slug":"gym"},"coordinates":{"lat":-13.52659,"lng":-71.99096},"full_address":"-13.52659,-71.99096990214"}},
+{"name":"Capilla Bolognesi","location":{"country":{"slug":"gym"},"coordinates":{"lat":-13.53322,"lng":-71.98562},"full_address":"-13.53322,-71.98562"}},
 {"name":"Nido Charmander","location":{"country":{"slug":"nido"},"coordinates":{"lat":-13.508363,"lng":-71.981724},"full_address":"-13.508363, -71.981724"}},
 {"name":"Nido Wailmer","location":{"country":{"slug":"nido"},"coordinates":{"lat":-13.518413,"lng":-71.981355},"full_address":"-13.518413, -71.981355"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.524006,"lng":-71.961440},"full_address":"-13.524006, -71.961440"}},

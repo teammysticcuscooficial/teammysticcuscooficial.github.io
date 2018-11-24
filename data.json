@@ -91,5 +91,6 @@
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52301,"lng":-71.95990},"full_address":"-13.52301,-71.95990"}},
 {"name":"Mision Magicarp","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52691,"lng":-71.96230},"full_address":"-13.52691,-71.96230"}},
 {"name":"Mision Pineco","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52403,"lng":-71.95670},"full_address":"-13.52403,-71.95670"}},
+{"name":"Mision Spinda","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52380,"lng":-71.95200},"full_address":"-13.52380,-71.95200"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.52323,"lng":-71.95879},"full_address":"-13.52323,-71.95879"}}
 ]

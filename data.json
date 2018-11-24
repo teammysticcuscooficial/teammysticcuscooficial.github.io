@@ -108,6 +108,8 @@
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.521054,"lng":-71.957290},"full_address":"-13.521054,-71.957290"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.521892,"lng":-71.958860},"full_address":"-13.521892,-71.958860"}},
 {"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.53067,"lng":-71.97366},"full_address":"-13.53067,-71.97366"}},
+{"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.517452,"lng":-71.978421},"full_address":"-13.517452,-71.978421"}},
+{"name":"Mision Ditto","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.517422,"lng":-71.978218},"full_address":"-13.517422,-71.978218"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.534544,"lng":-71.932310},"full_address":"-13.534544,-71.932310"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.524660,"lng":-71.948890},"full_address":"-13.524660,-71.948890"}},
 {"name":"Mision Scyther","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.525673,"lng":-71.951004},"full_address":"-13.525673,-71.951004"}},
@@ -125,5 +127,6 @@
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.517157,"lng":-71.950745},"full_address":"-13.517157,-71.950745"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.524301,"lng":-71.955930},"full_address":"-13.524301,-71.955930"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.525983,"lng":-71.957640},"full_address":"-13.525983,-71.957640"}},
+{"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.53327,"lng":-71.97240},"full_address":"-13.53327,-71.97240"}},
 {"name":"Mision Aerodactyl","location":{"country":{"slug":"stop"},"coordinates":{"lat":-13.526719,"lng":-71.957695},"full_address":"-13.526719,-71.957695"}}
 ]

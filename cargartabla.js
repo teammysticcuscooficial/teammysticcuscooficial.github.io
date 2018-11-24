@@ -8,7 +8,7 @@ function cargarEventos(){
 }
 
 function mostrarTabla(){
-alert("cargando");
+alert("prueba de cargando");
 	var cuerpotabla = document.getElementById("equipos-tabla");
 	cuerpoTabla.innerHTML = "<tr><th>Marcavalle</th><th>gym</th><th>-13.508363,</th><th>-71.981724</th></tr>";
 }

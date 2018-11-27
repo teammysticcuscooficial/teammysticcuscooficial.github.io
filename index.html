@@ -269,3 +269,19 @@ addEventListener('load', () => {
       }
     }
   </script>
+  <div id="result"></div>
+  <script type="text/javascript">
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET","https://ablyperu.com/pokemapcusco/index.php",true);
+  xhr.onreadystatechange = function()
+  {
+    if ((xhr.readyState==4)&&(xhr.status = 200))
+    {
+      var ob =  JSON.parse(xhr.responseText);
+      var str = "name"+ob.name+"id="+ob.id+" average="+ob.average;
+      var node = document.getElementById("result");
+      node.innerHTML = str;
+    }
+  };
+  xhr.send();
+  </script>

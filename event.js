@@ -16,8 +16,6 @@ jQuery(document).ready(function ($) {
     // bounds / função limites do mapa
     var bounds = new google.maps.LatLngBounds();
     
-    
-
     /**
      * Função inicializar mapa
      */
@@ -39,7 +37,7 @@ jQuery(document).ready(function ($) {
             scaleControl: true,
             mapTypeControl: false,
             overviewMapControl: true,
-            mapTypeId: google.maps.MapTypeId.ROADMAP, // tipo de mapa
+            mapTypeId: google.maps.MapTypeId.ROADMAP, //tipo de mapa
             styles:[
                   {
                     "featureType": "poi.business",

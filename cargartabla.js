@@ -1,6 +1,7 @@
 // JSON file with data markers
 //var mapJsonFile = 'https://cdn.rawgit.com/rhcarlosweb/google-maps-markers/7facb603/stores.json';
-var mapJsonFile = 'data.json';
+var mapJsonFile = 'https://ablyperu.com/pokemapcusco/poke.json';
+//var mapJsonFile = 'data.json';
  window.onload = cargarEventos;
 
 function cargarEventos(){

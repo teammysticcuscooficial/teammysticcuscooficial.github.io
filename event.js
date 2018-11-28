@@ -37,7 +37,7 @@ jQuery(document).ready(function ($) {
             streetViewControl: false,
             scaleControl: true,
             mapTypeControl: false,
-            gestureHandling: "greedy",
+            gestureHandling: "greedy", // control de gestos con un solo dedo
             overviewMapControl: true,
             mapTypeId: google.maps.MapTypeId.ROADMAP, //tipo de mapa
             styles:[

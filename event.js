@@ -29,6 +29,7 @@ jQuery(document).ready(function ($) {
         var mapOptions = {
             zoom: 14, // zoom inicial mapa
             maxZoom: 21, // zoom máximo
+            minZoom: 13, // zoom máximo
             center: myLatlng, // localização inicial
             draggable : true,
             scrollwheel: true,

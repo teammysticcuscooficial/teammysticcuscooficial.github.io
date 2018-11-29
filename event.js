@@ -154,7 +154,7 @@ jQuery(document).ready(function ($) {
         var gymex = "img/gymex.png";
         var nido = "img/nido.png";
         var stop = "img/stop.png";
-        var stop1 = "pk/stop1.png";
+        var stop1 = "img/stop1.png";
 
         // imagem marcadores personalizados para cada tipo de local
         var icons = {

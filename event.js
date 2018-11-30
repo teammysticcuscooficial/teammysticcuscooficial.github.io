@@ -29,7 +29,7 @@ jQuery(document).ready(function ($) {
         var mapOptions = {
             zoom: 14, // zoom inicial mapa
             maxZoom: 21, // zoom máximo
-            minZoom: 13, // zoom máximo
+            minZoom: 8, // zoom máximo
             center: myLatlng, // localização inicial
             draggable : true,
             scrollwheel: true,
@@ -84,7 +84,7 @@ jQuery(document).ready(function ($) {
             // cluster config
             // ajustes para exibição de ícone com marcadores agrupados
             var optionsCluster = {
-                maxZoom: 13, // máximo zoom exibido cluster
+                maxZoom: 12, // máximo zoom exibido cluster
                 styles: [
                     {
                         textColor: '#ffffff', // cor texto cluster

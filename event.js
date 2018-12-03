@@ -156,6 +156,21 @@ jQuery(document).ready(function ($) {
         var stop = "img/stop.png";
         var stop1 = "img/stop1.png";
         var p1 = "pk/322.png";
+        var p2 = "pk/129.png";
+        var p3 = "pk/60.png";
+        var p4 = "pk/327.png";
+        var p5 = "pk/55.png";
+        var p6 = "pk/92.png";
+        var p7 = "pk/95.png";
+        var p8 = "pk/100.png";
+        var p9 = "pk/56.png";
+        var p10 = "pk/1.png";
+        var p11 = "pk/137.png";
+        var p12 = "pk/125.png";
+        var p13 = "pk/7.png";
+        var p14 = "pk/200.png";
+        var p15 = "pk/349.png";
+        var p16 = "pk/102.png";
 
         // imagem marcadores personalizados para cada tipo de local
         var icons = {
@@ -164,7 +179,22 @@ jQuery(document).ready(function ($) {
             nido: {icon: nido},
             stop: {icon: stop},
             stop1: {icon: stop1},
-            p1: {icon: p1}
+            p1: {icon: p1},
+            p2: {icon: p2},
+            p3: {icon: p3},
+            p4: {icon: p4},
+            p5: {icon: p5},
+            p6: {icon: p6},
+            p7: {icon: p7},
+            p8: {icon: p8},
+            p9: {icon: p9},
+            p10: {icon: p10},
+            p11: {icon: p11},
+            p12: {icon: p12},
+            p13: {icon: p13},
+            p14: {icon: p14},
+            p15: {icon: p15},
+            p16: {icon: p16}
         };
 
         // registro de marcadores

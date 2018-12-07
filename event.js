@@ -173,6 +173,7 @@ jQuery(document).ready(function ($) {
         var p16 = "pk/102.png";
         var p17 = "pk/246.png";
         var p18 = "pk/124.png";
+        var p19 = "pk/113.png";
 
         // imagem marcadores personalizados para cada tipo de local
         var icons = {
@@ -198,7 +199,8 @@ jQuery(document).ready(function ($) {
             p15: {icon: p15},
             p16: {icon: p16},
             p17: {icon: p17},
-            p18: {icon: p18}
+            p18: {icon: p18},
+            p19: {icon: p19}
         };
 
         // registro de marcadores

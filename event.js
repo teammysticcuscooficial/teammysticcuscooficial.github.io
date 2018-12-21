@@ -208,6 +208,7 @@ jQuery(document).ready(function ($) {
             title: title, // titulo marcador
             position: position, // posicao marcador
             icon: icons[markerinfo.location.country.slug].icon, // usa icone certo para cada tipo de marcador
+            map_icon_label: '<span class="label">Nuevos</span>',
             animation: google.maps.Animation.DROP, // animação drop marcador
             map: map, // registra marcador na variável map
             category: categories
@@ -222,7 +223,7 @@ jQuery(document).ready(function ($) {
         // registro de conteúdo na caixa de informações
         // do marcador
         var infowindow = new google.maps.InfoWindow({
-            content: '<div class="title-map"><h5>' + title + '</h5></div>' + '<div class="endereco"><input style="border: 0;margin-right: 6px;" id="foo" value="' + address + '"><button id="copy-button" class="" data-clipboard-target="#foo"><img width="12px" src="https://clipboardjs.com/assets/images/clippy.svg" alt="Copy to clipboard" title="Copy to clipboard"></button></div>'
+            content: '<div class="title-map"><h5>' + title + '</h5></div>' + '<div class="endereco"><input style="border: 0;margin-right: 6px;" id="foo" value="' + address + '" readonly><button id="copy-button" class="" data-clipboard-target="#foo"><img width="12px" src="https://clipboardjs.com/assets/images/clippy.svg" alt="Copy to clipboard" title="Copy to clipboard"></button></div>'
         });
 
         // exibe marcador quando clicado

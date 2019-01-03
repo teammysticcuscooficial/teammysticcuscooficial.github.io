@@ -185,7 +185,7 @@ jQuery(document).ready(function ($) {
         var p27 = "pk/27.png";
         var p28 = "pk/129.png";
         var p29 = "pk/37.png";
-        var p30 = "pk/92.png";
+        var p30 = "pk/347.png";
         var p31 = "pk/310.png";
         var p32 = "pk/73.png";
         var p33 = "img/pina.png";

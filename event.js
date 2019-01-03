@@ -155,25 +155,40 @@ jQuery(document).ready(function ($) {
         var nido = "img/nido.png";
         var stop = "img/stop.png";
         var stop1 = "img/stop1.png";
-        var p1 = "pk/322.png";
-        var p2 = "pk/129.png";
-        var p3 = "pk/60.png";
-        var p4 = "pk/327.png";
-        var p5 = "pk/55.png";
-        var p6 = "pk/92.png";
-        var p7 = "pk/95.png";
-        var p8 = "pk/100.png";
-        var p9 = "pk/56.png";
-        var p10 = "pk/1.png";
-        var p11 = "pk/137.png";
-        var p12 = "pk/125.png";
-        var p13 = "pk/7.png";
-        var p14 = "pk/200.png";
-        var p15 = "pk/349.png";
-        var p16 = "pk/102.png";
-        var p17 = "pk/246.png";
-        var p18 = "pk/124.png";
-        var p19 = "pk/113.png";
+        var p1 = "pk/327.png";
+        var p2 = "pk/399.png";
+        var p3 = "pk/92.png";
+        var p4 = "pk/95.png";
+        var p5 = "pk/246.png";
+        var p6 = "pk/133.png";
+        var p7 = "pk/1.png";
+        var p8 = "pk/96.png";
+        var p9 = "pk/138.png";
+        var p10 = "pk/66.png";
+        var p11 = "pk/124.png";
+        var p12 = "pk/131.png";
+        var p13 = "pk/66.png";
+        var p14 = "pk/125.png";
+        var p15 = "pk/1.png";
+        var p16 = "pk/58.png";
+        var p17 = "pk/104.png";
+        var p18 = "pk/129.png";
+        var p19 = "pk/102.png";
+        var p20 = "pk/126.png";
+        var p21 = "pk/113.png";
+        var p22 = "pk/147.png";
+        var p23 = "pk/121.png";
+        var p24 = "pk/81.png";
+        var p25 = "pk/60.png";
+        var p26 = "pk/140.png";
+        var p27 = "pk/27.png";
+        var p28 = "pk/129.png";
+        var p29 = "pk/37.png";
+        var p30 = "pk/92.png";
+        var p31 = "pk/310.png";
+        var p32 = "pk/73.png";
+        var p33 = "img/pina.png";
+        var p34 = "img/pina.png";
 
         // imagem marcadores personalizados para cada tipo de local
         var icons = {
@@ -200,7 +215,22 @@ jQuery(document).ready(function ($) {
             p16: {icon: p16},
             p17: {icon: p17},
             p18: {icon: p18},
-            p19: {icon: p19}
+            p19: {icon: p19},
+            p20: {icon: p20},
+            p21: {icon: p21},
+            p22: {icon: p22},
+            p23: {icon: p23},
+            p24: {icon: p24},
+            p25: {icon: p25},
+            p26: {icon: p26},
+            p27: {icon: p27},
+            p28: {icon: p28},
+            p29: {icon: p29},
+            p30: {icon: p30},
+            p31: {icon: p31},
+            p32: {icon: p32},
+            p33: {icon: p33},
+            p34: {icon: p34}
         };
 
         // registro de marcadores

@@ -161,6 +161,7 @@ jQuery(document).ready(function ($) {
         var p4 = "pk/95.png";
         var p5 = "pk/246.png";
         var p6 = "pk/133.png";
+        var p61 = "pk/142.png";
         var p7 = "pk/1.png";
         var p8 = "pk/96.png";
         var p9 = "pk/138.png";
@@ -203,6 +204,7 @@ jQuery(document).ready(function ($) {
             p4: {icon: p4},
             p5: {icon: p5},
             p6: {icon: p6},
+            p61: {icon: p61},
             p7: {icon: p7},
             p8: {icon: p8},
             p9: {icon: p9},

@@ -252,6 +252,7 @@ jQuery(document).ready(function ($) {
         // limite adicionado com posição de cada marcador
         bounds.extend(marker.position);
 
+        var selectedInfoWindow;
         // registro de conteúdo na caixa de informações
         // do marcador
         var infowindow = new google.maps.InfoWindow({
@@ -259,16 +260,40 @@ jQuery(document).ready(function ($) {
         });
 
         // exibe marcador quando clicado
-        marker.addListener('click', function () {
+        //marker.addListener('click', function () {
             // zoom no marcador
             // map.setZoom(14);
 
             // centraliza mapa na posição do marcador
             // map.setCenter(marker.getPosition());
-            
             // abre caixa informações marcador
-            infowindow.open(map, marker);
+            // infowindow.open(map, this);
+            //infowindow.open(map, marker);
+        //});
+        
+        // registro de conteúdo na caixa de informações
+        // do marcador
+        
+
+        // Open the infowindow on marker click
+        google.maps.event.addListener(marker, "click", function() {
+            //Check if there some info window selected and if is opened then close it
+            if (selectedInfoWindow != null && selectedInfoWindow.getMap() != null) {
+                selectedInfoWindow.close();
+                //If the clicked window is the selected window, deselect it and return
+                if (selectedInfoWindow == infowindow) {
+                    selectedinfowindow = null;
+                    return;
+                }
+            }
+            //If arrive here, that mean you should open the new info window 
+            //because is different from the selected
+            selectedInfoWindow = infowindow;
+            selectedInfoWindow.open(map, marker);
         });
+
+
+
 
         // Exibe marcador quando hover
         // marker.addListener('mouseover', function() {

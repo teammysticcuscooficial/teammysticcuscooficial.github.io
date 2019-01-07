@@ -190,7 +190,7 @@ jQuery(document).ready(function ($) {
         var p32 = "pk/73.png";
         var p33 = "img/pina.png";
         var p34 = "img/pina.png";
-        var cr = "img/pina.png";
+        var cr = "img/raro.png";
 
         // imagem marcadores personalizados para cada tipo de local
         var icons = {

@@ -190,6 +190,7 @@ jQuery(document).ready(function ($) {
         var p32 = "pk/73.png";
         var p33 = "img/pina.png";
         var p34 = "img/pina.png";
+        var cr = "img/pina.png";
 
         // imagem marcadores personalizados para cada tipo de local
         var icons = {
@@ -232,7 +233,8 @@ jQuery(document).ready(function ($) {
             p31: {icon: p31},
             p32: {icon: p32},
             p33: {icon: p33},
-            p34: {icon: p34}
+            p34: {icon: p34},
+            cr: {icon: cr}
         };
 
         // registro de marcadores

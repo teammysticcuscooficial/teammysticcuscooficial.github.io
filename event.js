@@ -186,10 +186,12 @@ jQuery(document).ready(function ($) {
         var p28 = "pk/129.png";
         var p29 = "pk/37.png";
         var p30 = "pk/347.png";
+        var p301 = "pk/347.png";
         var p31 = "pk/310.png";
         var p32 = "pk/73.png";
         var p33 = "img/pina.png";
         var p34 = "img/pina.png";
+        var pcr = "img/raro.png";
 
         // imagem marcadores personalizados para cada tipo de local
         var icons = {
@@ -229,10 +231,12 @@ jQuery(document).ready(function ($) {
             p28: {icon: p28},
             p29: {icon: p29},
             p30: {icon: p30},
+            p301: {icon: p301},
             p31: {icon: p31},
             p32: {icon: p32},
             p33: {icon: p33},
-            p34: {icon: p34}
+            p34: {icon: p34},
+            pcr: {icon: pcr}
         };
 
         // registro de marcadores

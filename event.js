@@ -155,6 +155,7 @@ jQuery(document).ready(function ($) {
         var nido = "img/nido.png";
         var stop = "img/stop.png";
         var stop1 = "img/stop1.png";
+        var p0 = "pk/131.png";
         var p1 = "pk/56.png";
         var p2 = "pk/66.png";
         var p3 = "pk/1.png";
@@ -200,6 +201,7 @@ jQuery(document).ready(function ($) {
             nido: {icon: nido},
             stop: {icon: stop},
             stop1: {icon: stop1},
+            p0: {icon: p0},
             p1: {icon: p1},
             p2: {icon: p2},
             p3: {icon: p3},
